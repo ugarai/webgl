@@ -29,22 +29,32 @@
 			camera.position.z = 5;
 
 			var loader = new THREE.JSONLoader();
-			var superman =  loader.load('./superman.json',
+			loader.load('./superman.json',
 				function(geometry, materials){
 					var material = new THREE.MeshFaceMaterial(materials);
 					var object = new THREE.Mesh(geometry, material);
 					object.position.set(6,-5,3);
 					scene.add(object);
+
+					var animate = function(){
+						requestAnimationFrame(animate);
+
+						object.rotation.x += 0.05;
+						object.rotation.y += 0.05;
+
+						renderer.render(scene,camera);
+					}
+
+					animate();
 				}
 			);
 
-			alert(superman.showStatus);
 
 			var render = function(){
 				requestAnimationFrame(render);
 
-				cube.rotation.x += 0.1;
-				cube.rotation.y += 0.1;
+				cube.rotation.x += 0.05;
+				cube.rotation.y += 0.05;
 
 				renderer.render(scene, camera);
 			}
