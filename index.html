@@ -29,14 +29,16 @@
 			camera.position.z = 5;
 
 			var loader = new THREE.JSONLoader();
-			loader.load('./superman.json',
+			var superman =  loader.load('./superman.json',
 				function(geometry, materials){
 					var material = new THREE.MeshFaceMaterial(materials);
 					var object = new THREE.Mesh(geometry, material);
-					object.position.x = -2;
+					object.position.set(6,-5,3);
 					scene.add(object);
 				}
 			);
+
+			alert(superman.showStatus);
 
 			var render = function(){
 				requestAnimationFrame(render);
