@@ -20,9 +20,9 @@
 			renderer.setSize(width, height);
 			renderer.setClearColor(0xffffff);
 			renderer.shadowMapEnabled = true;
-			document.body.appendChild( renderer.domElement);
+			document.body.appendChild(renderer.domElement);
 
-			var geometry = new THREE.BoxGeometry( 2, 2, 2);
+			var geometry = new THREE.BoxGeometry(2,2,2);
 			var material = new THREE.MeshBasicMaterial({color:0x00ff00});
 			var cube = new THREE.Mesh(geometry, material);
 			cube.castShadow = true;
@@ -40,7 +40,7 @@
 			var plane = new THREE.Mesh(plane_geometry,plane_material);
 			plane.receiveShadow = true;
 			scene.add(plane);
-/*
+
 			var loader = new THREE.JSONLoader();
 			loader.load('./superman.json',
 				function(geometry, materials){
@@ -56,7 +56,7 @@
 					animate();
 				}
 			);
-*/
+
 			var render = function(){
 				requestAnimationFrame(render);
 				cube.rotation.y += 0.01;
