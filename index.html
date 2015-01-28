@@ -28,7 +28,7 @@
 			cube.castShadow = true;
 			scene.add(cube);
 
-			camera.lookAt(cube.position);
+			camera.position.x = 5;
 
 			var directionalLight = new THREE.DirectionalLight(0xffffff);
 			directionalLight.position.set(4, 4, 4).normalize();
