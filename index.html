@@ -16,9 +16,9 @@
                     trackball = new THREE.TrackballControls( camera );//カメラぐりぐりしたいならこれと・・・
                     
                     //ライティング
-                   // var directionalLight = new THREE.DirectionalLight( 0xffffff, 3 ); //平行光源（色、強度）
-                   // directionalLight.position.set(0,0,3);
-                   // scene.add( directionalLight );
+                   var directionalLight = new THREE.DirectionalLight( 0xffffff, 1 ); //平行光源（色、強度）
+                   directionalLight.position.set(0,50,0);
+                   scene.add( directionalLight );
                 
                     
                     //オブジェクト
