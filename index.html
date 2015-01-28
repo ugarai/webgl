@@ -31,7 +31,7 @@
 			camera.position.set(5,5,5);
 			camera.lookAt({x:0, y:0, z:0});
 
-			var light = new THREE.DirectionalLight(0xffffff,1.5);
+			var light = new THREE.DirectionalLight(0xffffff);
 			light.position.set(-2,-2,-2).normalize();
 			light.castShadow = true;
 			scene.add(light);
@@ -43,6 +43,7 @@
 					var object = new THREE.Mesh(geometry, material);
 					object.position.set(0,-4,0);
 					object.scale.set(2,2,2);
+					object.castShadow = true;
 					scene.add(object);
 					
 					var animate = function(){
