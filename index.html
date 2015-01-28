@@ -24,7 +24,7 @@
                     //オブジェクト
                     loader = new THREE.JSONLoader();
                     
-                    loader.load( './monkey.json', function ( geometry, materials ) { //第１引数はジオメトリー、第２引数はマテリアルが自動的に取得）
+                    loader.load( './superman.json', function ( geometry, materials ) { //第１引数はジオメトリー、第２引数はマテリアルが自動的に取得）
                                 var faceMaterial = new THREE.MeshFaceMaterial( materials );
                                 json = new THREE.Mesh( geometry, faceMaterial );
                                 json.position.set( 0,100,0);
