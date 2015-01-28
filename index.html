@@ -9,37 +9,36 @@
 	<body>
 		<script src="./js/three.min.js"></script>
 		<script>
-alert('0');
 			var width = window.innerWidth;
 			var height = window.innerHeight;
 			var aspect = width / height;
 
 			var scene = new THREE.Scene();
 			var camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000);
-alert('1');
 			var renderer = new THREE.WebGLRenderer();
+
 			renderer.setSize(width, height);
 			renderer.setClearColor(0xffffff);
-//			renderer.shadowMapEnabled = true;
+			renderer.shadowMapEnabled = true;
 			document.body.appendChild(renderer.domElement);
-alert('2');
+
 			var geometry = new THREE.BoxGeometry(2,2,2);
 			var material = new THREE.MeshBasicMaterial({color:0x00ff00});
 			var cube = new THREE.Mesh(geometry, material);
-//			cube.castShadow = true;
+			cube.castShadow = true;
 			scene.add(cube);
 
 			camera.position.z = 5;
-/*
+
 			var directionalLight = new THREE.DirectionalLight(0xffffff);
 			directionalLight.position.set(4, 4, 4).normalize();
-//			directionalLight.castShadow = true;
+			directionalLight.castShadow = true;
 			scene.add(directionalLight);
 
 			var plane_geometry = new THREE.PlaneGeometry(1000, 1000, 1, 1);
 			var Plane_material = new THREE.MeshLambertMateriall();
 			var plane = new THREE.Mesh(plane_geometry,plane_material);
-//			plane.receiveShadow = true;
+			plane.receiveShadow = true;
 			scene.add(plane);
 
 			var loader = new THREE.JSONLoader();
@@ -57,16 +56,13 @@ alert('2');
 					animate();
 				}
 			);
-*/
-alert('3');
+
 			var render = function(){
 				requestAnimationFrame(render);
 				cube.rotation.y += 0.01;
 				cube.rotation.x += 0.01;
 				renderer.render(scene, camera);
 			}
-alert('4');
-
 			render();
 		</script>
 	</body>
