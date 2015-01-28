@@ -34,8 +34,15 @@
 					var material = new THREE.MeshFaceMaterial(materials);
 					var object = new THREE.Mesh(geometry, material);
 					object.position.set(-3,-2,0);
-					object.rotation.y += 0.05;
 					scene.add(object);
+					
+					var animate = function(){
+						requestAnimationFrame(render);
+						object.rotation.y += 0.05;
+						renderer.render(scene, camera);
+					}
+
+					animate();
 				}
 			);
 
