@@ -31,7 +31,7 @@
 			camera.position.set(5,5,5);
 			camera.lookAt({x:0, y:0, z:0});
 
-			var light = new THREE.DirectionalLight(0xff0000,1.5);
+			var light = new THREE.DirectionalLight(0xffffff,1.5);
 			light.position.set(-2,-2,-2).normalize();
 			light.castShadow = true;
 			scene.add(light);
@@ -52,7 +52,7 @@
 					}
 					animate();
 				}
-			,'./');
+			);
 /*
 			var render = function(){
 				requestAnimationFrame(render);
