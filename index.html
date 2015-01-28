@@ -39,7 +39,7 @@
 			var loader = new THREE.JSONLoader();
 			loader.load('./superman.json',
 				function(geometry, materials){
-					var material = new THREE.MeshBasicMaterial(materials);
+					var material = new THREE.MeshFaceMaterial(materials);
 					var object = new THREE.Mesh(geometry, material);
 					object.position.set(-3,-2,0);
 					scene.add(object);
