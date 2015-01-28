@@ -13,7 +13,7 @@
                     camera = new THREE.PerspectiveCamera( 75, 640/480, 1, 10000 );
                     camera.position.z = 1000;
                     //scene.add( camera );
-                    trackball = new THREE.TrackballControls( camera );//カメラぐりぐりしたいならこれと・・・
+                    //trackball = new THREE.TrackballControls( camera );//カメラぐりぐりしたいならこれと・・・
                     
                     //ライティング
                     var directionalLight = new THREE.DirectionalLight( 0xffffff, 3 ); //平行光源（色、強度）
@@ -42,7 +42,7 @@
                                 
                                 //レンダラー
                                 renderer = new THREE.WebGLRenderer();//THREE.CanvasRenderer();でもいいけどポリゴンの裏が非表示？
-        //                        renderer.setSize( 640, 480 );
+                                renderer.setSize( 640, 480 );
                                 document.body.appendChild( renderer.domElement );
                                 
                 }
