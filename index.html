@@ -28,7 +28,7 @@
                     loader.load( './superman.json', function ( geometry, materials ) { //第１引数はジオメトリー、第２引数はマテリアルが自動的に取得）
                                 var faceMaterial = new THREE.MeshFaceMaterial( materials );
                                 json = new THREE.Mesh( geometry, faceMaterial );
-                                json.position.set( 0,0,0);
+                                json.position.set( 0,-100,0);
                                 json.scale.set( 100, 100, 100 );
                                 scene.add( json );
                                 } );
