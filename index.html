@@ -45,7 +45,7 @@
 					object.position.set(-3,-2,0);
 					scene.add(object);
 					
-					light.target(object.position);
+					light.target = object.position;
 
 					var animate = function(){
 						requestAnimationFrame(animate);
