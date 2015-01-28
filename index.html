@@ -33,32 +33,22 @@
 				function(geometry, materials){
 					var material = new THREE.MeshFaceMaterial(materials);
 					var object = new THREE.Mesh(geometry, material);
-					object.position.set(2,0,0);
+					object.position.set(-3,-2,0);
 					scene.add(object);
-
-					var animate = function(){
-						requestAnimationFrame(animate);
-
-						object.rotation.y += 0.05;
-
-						renderer.render(scene,camera);
-					}
-
-					animate();
+					render(cube,'0.01');
 				}
 			);
 
 
-			var render = function(){
+			var render = function(obj,val){
 				requestAnimationFrame(render);
 
-				cube.rotation.x += 0.05;
-				cube.rotation.y += 0.05;
+				obj.rotation.x += val;
+				obj.rotation.y += val;
 
 				renderer.render(scene, camera);
 			}
 
-			render();
 
 		</script>
 	</body>
