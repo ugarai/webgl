@@ -28,12 +28,18 @@
 			cube.castShadow = true;
 			scene.add(cube);
 
-			camera.position.x = 5;
+			camera.position.z = 5;
 
 			var directionalLight = new THREE.DirectionalLight(0xffffff);
 			directionalLight.position.set(4, 4, 4).normalize();
 			directionalLight.castShadow = true;
 			scene.add(directionalLight);
+
+			var plane_geometry = new THREE.PlaneGeometry(1000, 1000, 1, 1);
+			var Plane_material = new THREE.MeshLambertMateriall();
+			var plane = new THREE.Mesh(plane_geometry,plane_material);
+			plane.receiveShadow = true;
+			scene.add(plane);
 /*
 			var loader = new THREE.JSONLoader();
 			loader.load('./superman.json',
