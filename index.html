@@ -21,13 +21,13 @@
 			renderer.setClearColor(0xffffff);
 			renderer.shadowMapEnabled = true;
 			document.body.appendChild(renderer.domElement);
-
+/*
 			var geometry = new THREE.BoxGeometry(1,1,1);
 			var material = new THREE.MeshBasicMaterial({color:0x00ff00});
 			var cube = new THREE.Mesh(geometry, material);
 			cube.castShadow = true;
 			scene.add(cube);
-
+*/
 			camera.position.set(2,2,2);
 			camera.lookAt({x:0, y:0, z:0});
 
@@ -41,7 +41,7 @@
 				function(geometry, materials){
 					var material = new THREE.MeshFaceMaterial(materials);
 					var object = new THREE.Mesh(geometry, material);
-					object.position.set(-3,-2,0);
+					//object.position.set(-3,-2,0);
 					scene.add(object);
 					
 					var animate = function(){
@@ -51,7 +51,7 @@
 					animate();
 				}
 			,'./');
-
+/*
 			var render = function(){
 				requestAnimationFrame(render);
 				cube.rotation.y += 0.01;
@@ -59,6 +59,7 @@
 				renderer.render(scene, camera);
 			}
 			render();
+*/
 		</script>
 	</body>
 </html>
