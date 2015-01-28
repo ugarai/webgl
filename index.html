@@ -36,7 +36,7 @@
 			scene.add(directionalLight);
 
 			var plane_geometry = new THREE.PlaneGeometry(1000, 1000, 1, 1);
-			var Plane_material = new THREE.MeshLambertMaterial();
+			var plane_material = new THREE.MeshLambertMaterial();
 			var plane = new THREE.Mesh(plane_geometry,plane_material);
 			plane.receiveShadow = true;
 			scene.add(plane);
