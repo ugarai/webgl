@@ -37,8 +37,8 @@
 					scene.add(object);
 					
 					var animate = function(){
-						requestAnimationFrame(render);
-						object.rotation.y += 0.05;
+						requestAnimationFrame(animate);
+						object.rotation.y += 0.02;
 						renderer.render(scene, camera);
 					}
 
