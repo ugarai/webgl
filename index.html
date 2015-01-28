@@ -45,11 +45,9 @@
 					object.position.set(-3,-2,0);
 					scene.add(object);
 					
-					light.target = object.position;
-
 					var animate = function(){
 						requestAnimationFrame(animate);
-						object.rotation.y += 0.01;
+						object.rotation.y += 0.001;
 					}
 					animate();
 				}
