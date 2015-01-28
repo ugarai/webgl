@@ -11,8 +11,7 @@
                 function init() {
                     scene = new THREE.Scene();
                     camera = new THREE.PerspectiveCamera( 75, 640/480, 1, 10000 );
-                    camera.position.z =  800;
-                    camera.position.y =  100;
+                    camera.position.set(50, 150, 1000);
 
                     //scene.add( camera );
                     trackball = new THREE.TrackballControls( camera );//カメラぐりぐりしたいならこれと・・・
