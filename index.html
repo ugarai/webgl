@@ -40,16 +40,16 @@
 			);
 
 
-			var render = function(obj,val){
+			var render = function(obj){
 				requestAnimationFrame(render);
 
-				obj.rotation.x += val;
-				obj.rotation.y += val;
+				obj.rotation.x += 0.01;
+				obj.rotation.y += 0.01;
 
 				renderer.render(scene, camera);
 			}
 
-			render(cube,'0.001');
+			render(cube);
 
 
 		</script>
