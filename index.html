@@ -22,6 +22,10 @@
 			var cube = new THREE.Mesh(geometry, material);
 			scene.add(cube);
 
+			var light = new THREE.DirectionalLight(0xffffff);
+			light.position.set(1,1,1).normalize();
+			scene.add(cude);
+
 			renderer.setSize(width, height);
 			renderer.setClearColor(0xffffff);
 			renderer.shadowMapEnabled = true;
