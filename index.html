@@ -31,33 +31,6 @@
 			camera.position.set(10,10,10);
 			camera.lookAt({x:0, y:0, z:0});
 
-			var light = new THREE.DirectionalLight(0xffffff);
-			light.position.set(1,1,1).normalize();
-			light.castShadow = true;
-			scene.add(light);
-/*
-			var loader = new THREE.JSONLoader();
-			loader.load('./superman.json',
-				function(geometry, materials){
-					for(var i=0; i< materials.length; i++){
-						materials[i].morphTtargets = true;
-					}
-					var material = new THREE.MeshFaceMaterial(materials);
-					var object = new THREE.Mesh(geometry, material);
-					object.position.set(0,-4,0);
-					object.scale.set(2,2,2);
-					object.castShadow = true;
-					scene.add(object);
-					
-					var animate = function(){
-						requestAnimationFrame(animate);
-						object.rotation.y += 0.001;
-						renderer.render(scene, camera);
-					}
-					animate();
-				}
-			);
-/*///*
 			var render = function(){
 				requestAnimationFrame(render);
 				cube.rotation.y += 0.01;
@@ -65,7 +38,6 @@
 				renderer.render(scene, camera);
 			}
 			render();
-//*/
 		</script>
 	</body>
 </html>
