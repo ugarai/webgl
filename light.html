@@ -24,7 +24,7 @@
 				var material = new THREE.MeshLambertMaterial({color:0xffffff});
 				var cube = new THREE.Mesh(geometry, material);
 				var pos = new THREE.Vector3();
-				pos.x = Math.random16();
+				pos.x = new THREE.Math.random16();
 				cube.position.set(pos.x, pos.x, pos.x);
 				scene.add(cube);
 			}
